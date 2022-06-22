@@ -9,19 +9,19 @@ import {fade, titleAnim, fadeIn, scrollReveal} from '../animation';
 const CalendarSection = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const stopLoadingMessage = () => {
+    const stopLoadingWheel = () => {
         setIsLoaded(true);
     }
 
     return (
-        <GoogleCalendar>
+        <GoogleCalendar className="container-sm">
             {!isLoaded ? (
                     <Spinner variants={fade}>
                         <h3>Google Calendar Loading...</h3>
                     </Spinner>
                 ) : ""
             }
-            <iframe onLoad={stopLoadingMessage} src="https://calendar.google.com/calendar/embed?height=750&wkst=1&bgcolor=%2333B679&ctz=America%2FNew_York&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=1&src=dGlzc2VyYXNoZW5hbEBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%237986CB&color=%237986CB" style={{border:0}} frameBorder="0" scrolling="no"></iframe>
+            <iframe onLoad={stopLoadingWheel} src="https://calendar.google.com/calendar/embed?height=750&wkst=1&bgcolor=%2333B679&ctz=America%2FNew_York&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=1&src=dGlzc2VyYXNoZW5hbEBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%237986CB&color=%237986CB" style={{border:0}} frameBorder="0" scrolling="no"></iframe>
         </GoogleCalendar> 
     );
 };
@@ -29,9 +29,10 @@ const CalendarSection = () => {
 const Spinner = styled(motion.div)`
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 45%;
+    padding-top: 25rem;
+    //position: absolute;
+    //top: 50%;
+    //left: 45%;
     z-index: 1;
     align-items: center;
     ::after{
@@ -52,26 +53,51 @@ const Spinner = styled(motion.div)`
     h3{
         padding-right: 5px;
     }
-    @media (max-width: 480px){
+    /* @media (max-width: 480px){
         top: 50%;
         left: 23%;
-    }
+    } */
 `;
 
 const GoogleCalendar = styled(motion.div)`
     iframe{
-        width: 1500px;
-        height: 725px;
-        padding-top: 5rem;
-        padding-left: 8rem;
+        width: 100%;
+        padding-top: 2rem;
         z-index: 2;
     }
     @media (max-width: 480px){
         iframe{
-            width: 40rem;
-            height: 48rem;
-            position: absolute;
-            left: -24%;
+            height: 50rem;
+        }
+    }
+    @media (max-width: 576px){
+        iframe{
+            height: 50rem;
+        }
+    }
+    @media (max-width: 768px){
+        iframe{
+            height: 50rem;
+        }
+    }
+    @media (max-width: 992px){
+        iframe{
+            height: 50rem;
+        }
+    }
+    @media (max-width: 1200px){
+        iframe{
+            height: 50rem;
+        }
+    }
+    @media (max-width: 1400px){
+        iframe{
+            height: 51rem;
+        }
+    }
+    @media (max-width: 2600px){
+        iframe{
+            height: 51rem;
         }
     }
 `;

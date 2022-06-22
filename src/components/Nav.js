@@ -47,7 +47,7 @@ const Nav = () => {
                         animate={{ width: activepath.pathname === "/" ? "50%" : "0%" }} 
                     />
                 </li>
-                <li className="nav-text">
+                {/* <li className="nav-text">
                     <Link to="/contact">
                         Contact Me
                     </Link>
@@ -56,7 +56,7 @@ const Nav = () => {
                         initial={{ width: "0%" }} 
                         animate={{ width: activepath.pathname === "/contact" ? "50%" : "0%" }} 
                     />
-                </li>
+                </li> */}
                 <li className="nav-text">
                     <Link to="/work">
                         Next Show

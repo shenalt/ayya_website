@@ -3,6 +3,7 @@ import React from "react";
 import AboutSection from "../components/AboutSection";
 import ContactMeSection from "../components/ContactMeSection";
 import OriginalProjectsSection from "../components/OriginalProjectsSection";
+import BootstrapTest from "../components/BootstrapTest";
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation } from "../animation";
