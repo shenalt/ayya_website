@@ -67,12 +67,12 @@ const GoogleCalendar = styled(motion.div)`
     }
     @media (max-width: 480px){
         iframe{
-            height: 50rem;
+            height: 45rem;
         }
     }
     @media (max-width: 576px){
         iframe{
-            height: 50rem;
+            height: 45rem;
         }
     }
     @media (max-width: 768px){

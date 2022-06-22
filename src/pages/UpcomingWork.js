@@ -25,46 +25,89 @@ const MyWork = () => {
                 <Frame3 variants={slider}></Frame3>
                 <Frame4 variants={slider}></Frame4>
             </motion.div>           
-            <Show>
-                <UpcomingShowText variants={fade}>The Art of Killin' It | June 17th, 8:00PM</UpcomingShowText>        
-                <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
-                    <NextShowBtn 
-                        animate={{ opacity: 1, transition: {delay: 1} }}
-                        initial={{ opacity: 0 }}    
-                    >
-                        Get Tickets
-                    </NextShowBtn>              
-                </motion.a>                       
-                <motion.div variants={lineAnim} className="line"></motion.div>              
-                    <Hide>
-                        <a href="https://www.theartofkillinit.com/" target="_blank">
-                            <NextShowImg>
-                                <Image>
-                                    <motion.img variants={photoAnim} src={artOfKillinIt} alt="photo"></motion.img>
-                                </Image>
-                            </NextShowImg>
-                        </a>
-                    </Hide>                                     
+            <Show className="container-sm">
+                <div className="row">
+                    <div className="col-md-10 col-sm-9">
+                        <UpcomingShowText className="" variants={fade}>The Art of Killin' It | June 17th, 8:00PM</UpcomingShowText>
+                    </div>
+                    <div className="col-md-2 col-sm-3 center-block">
+                        <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
+                            <NextShowBtn 
+                                animate={{ opacity: 1, transition: {delay: 1} }}
+                                initial={{ opacity: 0 }}    
+                            >
+                                Get Tickets
+                            </NextShowBtn>              
+                        </motion.a>
+                    </div>
+                    <motion.div variants={lineAnim} className="line"></motion.div>              
+                        <Hide>
+                            <a href="https://www.theartofkillinit.com/" target="_blank">
+                                <NextShowImg variants={photoAnim} src={artOfKillinIt} alt="We Fixed It"></NextShowImg>
+                            </a>
+                        </Hide> 
+                </div>                                    
             </Show>
-            <Show ref={element} variants={fade} animate={controls} initial="hidden">
-                <UpcomingShowText variants={fade}>We Fixed It | July 14th, 8:30PM</UpcomingShowText>
-                <motion.a href="https://caveat.stellartickets.com/events/we-fixed-it/occurrences/a63b4966-3c9e-4214-adbe-ef3370220348" target="_blank">
-                    <NextShowBtn>Get Tickets</NextShowBtn>              
-                </motion.a> 
-                <motion.div variants={lineAnim} className="line"></motion.div>
-                <Hide>
-                    <a href="https://caveat.nyc/series/we-fixed-it/" target="_blank">       
-                        <NextShowImg>
-                            <Image>
-                                <motion.img variants={photoAnim} src={weFixedIt} alt="We Fixed It!"></motion.img>
-                            </Image>
-                        </NextShowImg>
-                    </a>
-                </Hide>               
+            <Show className="container-sm" ref={element} variants={fade} animate={controls} initial="hidden">
+                <div className="row">
+                    <div className="col-md-10 col-sm-9">
+                        <UpcomingShowText className="" variants={fade}>We Fixed It | July 14th, 8:30PM</UpcomingShowText>
+                    </div>
+                    <div className="col-md-2 col-sm-3">
+                        <motion.a href="https://caveat.stellartickets.com/events/we-fixed-it/occurrences/a63b4966-3c9e-4214-adbe-ef3370220348" target="_blank">
+                            <NextShowBtn>Get Tickets</NextShowBtn>              
+                        </motion.a>
+                    </div>
+                    <motion.div variants={lineAnim} className="line"></motion.div>              
+                        <Hide>
+                            <a href="https://www.theartofkillinit.com/" target="_blank">
+                                <NextShowImg variants={photoAnim} src={weFixedIt} alt="We Fixed It"></NextShowImg>
+                            </a>
+                        </Hide> 
+                </div>                                    
             </Show>
+
+
+
+            
         </Work>
     );
 };
+
+const NextShowImg = styled(motion.img)`
+    margin: auto;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+`;
+
+const NextShowBtn = styled(motion.button)`
+    float: right;
+    align-items: center;
+    @media (min-width: 1px) and (max-width: 480px){
+        width: 100%;
+        margin: 1rem 0rem 2rem 0rem;
+    }
+    @media (min-width: 481px) and (max-width: 576px){
+        width: 100%;
+        margin: 1rem 0rem 2rem 0rem;
+    }
+    @media (min-width: 577px) and (max-width: 768px){
+        margin-top: 50%;
+    }
+    @media (min-width: 769px) and (max-width: 992px){
+        margin-top: 50%;
+    }
+    @media (min-width: 993px) and (max-width: 1200px){
+        margin-top: 20%;
+    }
+    @media (min-width: 1201px) and (max-width: 1400px){
+        margin-top: 10%;
+    }
+    @media (min-width: 1701px){
+        margin-top: 20%;
+    }
+`;
 
 const Work = styled(motion.div)`
     min-height: 100vh;
@@ -74,8 +117,11 @@ const Work = styled(motion.div)`
         padding: 1rem 0rem;
     }
     @media (max-width: 1300px){
-        padding: 2rem 2rem;
+        padding: 1rem 1rem;
     }
+    /* @media (max-width: 768px){
+        padding: 0.1rem 0.1rem;
+    } */
 `;
 
 const Show = styled(motion.div)`
@@ -87,9 +133,9 @@ const Show = styled(motion.div)`
         margin-bottom: 3rem;
     }
     img{
-        width: 100%;
+        /* width: 100%;
         height: 70vh;
-        object-fit: cover;
+        object-fit: cover; */
     }
 `;
 
@@ -120,33 +166,40 @@ const Frame4 = styled(Frame1)`
     background: #8effa0;
 `;
 
-const NextShowBtn = styled(motion.button)`
-    float: right;
 
-    @media (max-width: 480px){
-        width: 100%;
-        margin-top: 1.5rem;
-        margin-bottom: -2rem;
-    }
-`;
 
-const NextShowImg = styled(motion.div)`
-    margin: auto;
-    width: 100%;
-    padding: 1px;
-    text-align: center;  
-    
-    height: auto;
-    @media (max-width: 480px){
-        margin-top: 5rem;
-        img{
-            height: 40vh;
-        }
-    }
-`;
+// const NextShowImg = styled(motion.div)`
+//     //margin: auto;
+//     //width: 100%;
+//     //padding: 1px;
+//     //text-align: center;  
+//     //height: auto;
+//     @media (max-width: 480px){
+//         //margin-top: 5rem;
+//         img{
+//             width: 10% ;
+//             //max-width: 100% ;
+//             height: 20% ;
+//             object-fit: contain;
+//         }
+//     }
+// `;
+
+// const WeFixedItImg = styled(motion.div)`
+//     /* margin: auto;
+//     width: 90%;
+//     padding: 1px;
+//     text-align: center;   */
+//     @media (max-width: 480px){
+//         img{
+//             width: 10% ;
+//             height: 20% ;
+//         }
+//     }
+// `;
 
 const UpcomingShowText = styled(motion.h2)`
-    display: inline;   
+    //display: inline;   
 `;
 
 export default MyWork;
