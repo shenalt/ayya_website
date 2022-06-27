@@ -1,15 +1,11 @@
 import React from "react";
-import reactGoogleCalendar from "@ericz1803/react-google-calendar";
-import Calendar from "@ericz1803/react-google-calendar";
 // Framer Motion
 import {motion} from 'framer-motion'
-import Wave from "./Wave";
 // Styled Components
 import { Frame1, Frame2, Frame3, Frame4, Hide } from "../styles";
-import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
+import { pageAnimation, fade, slider, sliderContainer } from "../animation";
 import { useScroll } from "../components/useScroll";
 import styled from 'styled-components';
-
 
 const VideosSection = () => {
     const [element1, controls1] = useScroll();
@@ -30,7 +26,7 @@ const VideosSection = () => {
                 <Frame4 variants={slider}></Frame4>
             </motion.div>
             <VideoContainer 
-                animate={{ opacity: 1, transition: {delay: 0.8} }}
+                animate={{ opacity: 1, transition: {delay: 1} }}
                 initial={{ opacity: 0 }}
             >
                 <motion.h4 variants={fade}>10/10 Dentists would recommend watching live, but if you can't here's the next best thing!</motion.h4>

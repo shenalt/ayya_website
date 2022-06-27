@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 // Import Styles
 import styled from 'styled-components';
-import { About, Description, Image } from "../styles";
-import {fade, titleAnim, fadeIn, scrollReveal} from '../animation';
+import { About } from "../styles";
+import {fade, scrollReveal} from '../animation';
 import { useScroll } from "./useScroll";
 import { motion } from "framer-motion";
 // Import EmailJS
@@ -67,62 +67,26 @@ const ServicesSection = () => {
                     onChange={e => setMessage(e.target.value)}
                 />
 
-                {name.length > 0 && email.length > 0 && message.length > 0 ? (
-                    <motion.input 
-                        variants={fade} 
-                        type="submit" 
-                        value="Send" 
-                        id="submitBtn" 
-                    />
-                ) : 
-                    <motion.input 
-                        variants={fade} 
-                        type="submit" 
-                        value="Send" 
-                        id="submitBtn" 
-                        disabled
-                    />
-                }                
+                <div>
+                    {name.length > 0 && email.length > 0 && message.length > 0 ? (
+                        <motion.input 
+                            variants={fade} 
+                            type="submit" 
+                            value="Send" 
+                            id="submitBtn" 
+                        />
+                    ) : 
+                        <motion.input 
+                            variants={fade} 
+                            type="submit" 
+                            value="Send" 
+                            id="submitBtn" 
+                            disabled
+                        />
+                    } 
+                </div>                           
             </form>
         </EmailForm>
-        // <Services variants={fade} animate={controls} initial="hidden" ref={element}>
-        //     <Description>
-        //         <h2>High <span>quality</span> services.</h2>
-        //         <Cards>
-        //             <Card>
-        //                 <div className="icon">
-        //                     <img src={clock} alt="clock" />
-        //                     <h3>Efficiency</h3>
-        //                 </div>
-        //                 <p>ellsdkndfslk lsieikjfdsl slkjdlf</p>
-        //             </Card>
-        //             <Card>
-        //                 <div className="icon">
-        //                     <img src={diaphragm} alt="diaphragm" />
-        //                     <h3>Diaphragm</h3>
-        //                 </div>
-        //                 <p>ellsdkndfslk lsieikjfdsl slkjdlf</p>
-        //             </Card>
-        //             <Card>
-        //                 <div className="icon">
-        //                     <img src={money} alt="money" />
-        //                     <h3>Affordable</h3>
-        //                 </div>
-        //                 <p>ellsdkndfslk lsieikjfdsl slkjdlf</p>
-        //             </Card>
-        //             <Card>
-        //                 <div className="icon">
-        //                     <img src={teamwork} alt="teamwork" />
-        //                     <h3>Teamwork</h3>
-        //                 </div>
-        //                 <p>ellsdkndfslk lsieikjfdsl slkjdlf</p>
-        //             </Card>
-        //         </Cards>
-        //     </Description>
-        //     <Image>
-        //         <img src={home2} alt="Second Image" />
-        //     </Image>
-        // </Services>
     );
 };
 
@@ -163,10 +127,9 @@ const EmailForm = styled(About)`
     h2{
         text-align: center;
     }
-
-    @media (max-width: 480px){
+    @media (min-width: 1px) and (max-width: 1200px){
         position: absolute;
-        left: -1%;
+        left: 0%;
         width: 100%;
         padding-top: 10rem;
         #submitBtn{
@@ -174,38 +137,66 @@ const EmailForm = styled(About)`
             width: 26%;
         }
     }
-`;
-
-const Services = styled(About)`
-    h2{
-        padding-bottom: 5rem;
-    }
-    p{
-        width: 70%;
-        padding: 2rem 0rem 4rem 0rem;
-    }
-`;
-
-const Cards = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    @media (max-width: 1300px){
-        justify-content: center;
-    }
-`;
-
-const Card = styled.div`
-    flex-basis: 20rem;
-    .icon{
-        display: flex;
-        align-items: center;
-        h3{
-            margin-left: 1rem;
-            background: white;
-            color: black;
-            padding: 1rem;
+    @media (min-width: 1201px) and (max-width: 1300px){
+        position: absolute;
+        left: 0%;
+        width: 100%;
+        padding-top: 10rem;
+        #submitBtn{
+            margin-left: 3rem;
+            width: 26%;
         }
     }
+    @media (min-width: 1301px) and (max-width: 1400px){
+        position: absolute;
+        left: 0%;
+        width: 100%;
+        padding-top: 10rem;
+        #submitBtn{
+            margin-left: 15.5rem;
+            width: 26%;
+        }
+    }
+    @media (min-width: 1401px) and (max-width: 1500px){
+        position: absolute;
+        padding-top: 10rem;
+        #submitBtn{
+            margin-left: 10rem;
+            width: 26%;
+        }
+    }
+    @media (min-width: 1501px) and (max-width: 1700px){
+        position: absolute;
+        padding-top: 10rem;
+        #submitBtn{
+            margin-left: 10rem;
+            width: 26%;
+        }
+    }
+    @media (min-width: 1701px) and (max-width: 1900px){
+        position: absolute;
+        padding-top: 10rem;
+        #submitBtn{
+            margin-left: 8rem;
+            width: 26%;
+        }
+    }
+    @media (min-width: 1901px) and (max-width: 3000px){
+        position: absolute;
+        padding-top: 10rem;
+        #submitBtn{
+            margin-left: 10.5rem;
+            width: 26%;
+        }
+    }
+`;
+
+const SubmitBtn = styled(motion.input)`
+
+`;
+
+const SubmitBtnContainer = styled(motion.div)`
+    width: 100%;
 `;
 
 export default ServicesSection;

@@ -1,13 +1,12 @@
 import React from "react";
-import home1 from '../img/home1.png';
 import ayyaPho from '../img/ayyaPhoto.webp';
 // Framer Motion
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
 import Wave from "./Wave";
 // Animation
 import { titleAnim, fade, photoAnim } from "../animation";
 // Styled Components
-import { About, Description, Hide, Image } from "../styles";
+import { About, Description, Hide } from "../styles";
 import styled from 'styled-components';
 
 
@@ -34,12 +33,11 @@ const AboutSection = () => {
                     Comedy Festival, Very Big Very Asian Comedy Festival and was a Quarterfinalist at the San Diego Comedy Festival. Come see him perform!
                 </Summary>                
             </Description>
-            <Image>
+            <FrontPageImg>
                 <motion.img variants={photoAnim} src={ayyaPho} alt="photo" />
-            </Image>
+            </FrontPageImg>
             <Wave />
         </About>
-        
     );
 };
 
@@ -48,8 +46,29 @@ const Summary = styled(motion.p)`
     font-size: 1.2rem;
 `;
 
-const IntroText = styled(motion.div)`
-    color: black;
+const FrontPageImg = styled(motion.div)`
+    z-index: 2;
+    flex: 1;
+    overflow: hidden;
+    img{
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+    }
+    @media (max-width: 480px){
+        img{
+        width: 80%;
+    }
+    }
+    @media (max-width: 576px){
+        img{
+        width: 80%;
+    }
+    }
+`;
+
+const Wrapper = styled(motion.div)`
+    overflow: hidden;
 `;
 
 export default AboutSection;

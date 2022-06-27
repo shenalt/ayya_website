@@ -7,7 +7,7 @@ import weFixedIt from '../img/weFixedIt.png';
 import { Image } from "../styles";
 // Animations
 import { motion } from 'framer-motion';
-import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
+import { pageAnimation, fade, fadeNextShowFront, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
 import { useScroll } from "../components/useScroll";
 
 const MyWork = () => {
@@ -28,7 +28,7 @@ const MyWork = () => {
             <Show className="container-sm">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fade}>The Art of Killin' It | June 17th, 8:00PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | June 17th, 8:00PM</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3 center-block">
                         <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
@@ -132,11 +132,6 @@ const Show = styled(motion.div)`
         background: #23d997;
         margin-bottom: 3rem;
     }
-    img{
-        /* width: 100%;
-        height: 70vh;
-        object-fit: cover; */
-    }
 `;
 
 const Hide = styled.div`
@@ -166,40 +161,6 @@ const Frame4 = styled(Frame1)`
     background: #8effa0;
 `;
 
-
-
-// const NextShowImg = styled(motion.div)`
-//     //margin: auto;
-//     //width: 100%;
-//     //padding: 1px;
-//     //text-align: center;  
-//     //height: auto;
-//     @media (max-width: 480px){
-//         //margin-top: 5rem;
-//         img{
-//             width: 10% ;
-//             //max-width: 100% ;
-//             height: 20% ;
-//             object-fit: contain;
-//         }
-//     }
-// `;
-
-// const WeFixedItImg = styled(motion.div)`
-//     /* margin: auto;
-//     width: 90%;
-//     padding: 1px;
-//     text-align: center;   */
-//     @media (max-width: 480px){
-//         img{
-//             width: 10% ;
-//             height: 20% ;
-//         }
-//     }
-// `;
-
-const UpcomingShowText = styled(motion.h2)`
-    //display: inline;   
-`;
+const UpcomingShowText = styled(motion.h2)``;
 
 export default MyWork;

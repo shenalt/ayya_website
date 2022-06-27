@@ -6,89 +6,90 @@ import { motion } from "framer-motion";
 const Nav = () => {
     const activepath = useLocation();
     return(
-        <StyledNav>
-            <h1>
-                <Link id="logo" to="/">
-                    Shenuque               
-                </Link>
-            </h1>
-            <ul>
-                <a href="https://twitter.com/shenuque" target="_blank">
-                    <li className="social-media" id="twitter">                   
-                        <i class="fa-brands fa-twitter"></i>
+            <StyledNav>
+                <h1>
+                    <Link id="logo" to="/">
+                        Shenuque               
+                    </Link>
+                </h1>
+                <SocialMediaBar>
+                    <a href="https://twitter.com/shenuque" target="_blank">
+                        <li className="social-media" id="twitter">                   
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC47cERyYBJbsxR3rt8Lh6DQ" target="_blank">
+                        <li className="social-media" id="youtube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </li>
+                    </a>
+                    
+                    <a href="https://www.tiktok.com/@fakeshenuque?lang=en" target="_blank">
+                        <li className="social-media" id="tiktok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </li>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/shenuque/" target="_blank">
+                        <li className="social-media" id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                    </a>                
+                </SocialMediaBar>
+                <ul>
+                    <li className="nav-text">
+                        <Link to="/">
+                            About Me
+                        </Link>
+                        <Line 
+                            transition={{ duration: 0.75 }} 
+                            initial={{ width: "0%" }} 
+                            animate={{ width: activepath.pathname === "/" ? "50%" : "0%" }} 
+                        />
                     </li>
-                </a>
-                <a href="https://www.youtube.com/channel/UC47cERyYBJbsxR3rt8Lh6DQ" target="_blank">
-                    <li className="social-media" id="youtube">
-                        <i class="fa-brands fa-youtube"></i>
+                    <li className="nav-text">
+                        <Link to="/photos">
+                            Photos
+                        </Link>
+                        <Line 
+                            transition={{ duration: 0.75 }} 
+                            initial={{ width: "0%" }} 
+                            animate={{ width: activepath.pathname === "/photos" ? "50%" : "0%" }} 
+                        />
                     </li>
-                </a>
-                
-                <a href="https://www.tiktok.com/@fakeshenuque?lang=en" target="_blank">
-                    <li className="social-media" id="tiktok">
-                        <i class="fa-brands fa-tiktok"></i>
+                    <li className="nav-text">
+                        <Link to="/work">
+                            Next Show
+                        </Link>
+                        <Line 
+                            transition={{ duration: 0.75 }} 
+                            initial={{ width: "0%" }} 
+                            animate={{ width: activepath.pathname === "/work" ? "50%" : "0%" }} 
+                        />
                     </li>
-                </a>
-                
-                <a href="https://www.instagram.com/shenuque/" target="_blank">
-                    <li className="social-media" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
+                    <li className="nav-text">
+                        <Link to="/calendar">
+                            Calendar
+                        </Link>
+                        <Line 
+                            transition={{ duration: 0.75 }} 
+                            initial={{ width: "0%" }} 
+                            animate={{ width: activepath.pathname === "/calendar" ? "50%" : "0%" }} 
+                        />
                     </li>
-                </a>                
-            </ul>
-            <ul>
-                <li className="nav-text">
-                    <Link to="/">
-                        About Me
-                    </Link>
-                    <Line 
-                        transition={{ duration: 0.75 }} 
-                        initial={{ width: "0%" }} 
-                        animate={{ width: activepath.pathname === "/" ? "50%" : "0%" }} 
-                    />
-                </li>
-                {/* <li className="nav-text">
-                    <Link to="/contact">
-                        Contact Me
-                    </Link>
-                    <Line 
-                        transition={{ duration: 0.75 }} 
-                        initial={{ width: "0%" }} 
-                        animate={{ width: activepath.pathname === "/contact" ? "50%" : "0%" }} 
-                    />
-                </li> */}
-                <li className="nav-text">
-                    <Link to="/work">
-                        Next Show
-                    </Link>
-                    <Line 
-                        transition={{ duration: 0.75 }} 
-                        initial={{ width: "0%" }} 
-                        animate={{ width: activepath.pathname === "/work" ? "50%" : "0%" }} 
-                    />
-                </li>
-                <li className="nav-text">
-                    <Link to="/calendar">
-                        Calendar
-                    </Link>
-                    <Line 
-                        transition={{ duration: 0.75 }} 
-                        initial={{ width: "0%" }} 
-                        animate={{ width: activepath.pathname === "/calendar" ? "50%" : "0%" }} 
-                    />
-                </li>
-                <li className="nav-text">
-                    <Link to="/videos">
-                        Videos
-                    </Link>
-                    <Line 
-                        transition={{ duration: 0.75 }} 
-                        initial={{ width: "0%" }} 
-                        animate={{ width: activepath.pathname === "/videos" ? "50%" : "0%" }} 
-                    />
-                </li>
-            </ul>
-        </StyledNav>
+                    <li className="nav-text">
+                        <Link to="/videos">
+                            Videos
+                        </Link>
+                        <Line 
+                            transition={{ duration: 0.75 }} 
+                            initial={{ width: "0%" }} 
+                            animate={{ width: activepath.pathname === "/videos" ? "50%" : "0%" }} 
+                        />
+                    </li>
+                </ul>
+            </StyledNav>
+        
     );
 };
 
@@ -153,13 +154,22 @@ const StyledNav = styled.div`
         flex-direction: column;
         padding: 1rem;
         ul {
-            padding: 2rem;
+            padding: 1.2rem;
             justify-content: space-around;
             width: 100%;
             li {
                 padding: 0;
             }
         }
+    }
+`;
+
+const SocialMediaBar = styled.ul`
+    @media (max-width: 480px){
+        margin-right: 1rem;
+    }
+    @media (max-width: 576px){
+        margin-right: 1rem;
     }
 `;
 

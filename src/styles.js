@@ -45,6 +45,17 @@ export const Image = styled.div`
     }
 `;
 
+export const ImageFlexTwo = styled.div`
+    z-index: 2;
+    flex: 2;
+    overflow: hidden;
+    img{
+        width: 90%;
+        height: 94vh;
+        object-fit: cover;
+    }
+`;
+
 export const Hide = styled.div`
     overflow: hidden;
 `;

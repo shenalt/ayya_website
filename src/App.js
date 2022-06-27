@@ -3,7 +3,7 @@ import React from "react";
 import GlobalStyle from "./components/GlobalStyle";
 // Pages
 import AboutMe from "./pages/AboutMe";
-import ContactMe from "./pages/ContactMe";
+import Photos from "./pages/Photos";
 import UpcomingWork from "./pages/UpcomingWork";
 import Nav from "./components/Nav";
 import Calendar from "./pages/Calendar";
@@ -30,7 +30,7 @@ function App() {
           <Route path="/" exact element={<AboutMe />} />
           <Route path="/aboutme" exact element={<AboutMe />} />
           <Route path="/work" exact element={<UpcomingWork />} />
-          <Route path="/contact" exact element={<ContactMe />} />
+          <Route path="/photos" exact element={<Photos />} />
           <Route path="/calendar" exact element={<Calendar />} />
           <Route path="/videos" exact element={<Videos />} />
         </Routes>

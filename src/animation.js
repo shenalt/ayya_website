@@ -39,6 +39,14 @@ export const fade = {
     },
 }
 
+export const fadeNextShowFront = {
+    hidden: {opacity: 0},
+    show: {
+        opacity: 1,
+        transition: {ease: 'easeOut', duration: 0.75, delay: 0.4},
+    },
+}
+
 export const photoAnim = {
     hidden: {scale: 1.5, opacity: 0},
     show: {
@@ -68,10 +76,14 @@ export const photoAnimExit = {
 }
 
 export const lineAnim = {
-    hidden: {width: '0%'},
+    hidden: {
+        width: '0%',
+        opacity: 0, 
+    },
     show: {
         width: "100%",
-        transition: { duration: 1.5 },
+        transition: { duration: 1.5},
+        opacity: 1,
     },
 };
 
