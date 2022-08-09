@@ -67,8 +67,4 @@ const FrontPageImg = styled(motion.div)`
     }
 `;
 
-const Wrapper = styled(motion.div)`
-    overflow: hidden;
-`;
-
 export default AboutSection;

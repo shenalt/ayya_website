@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 // Import Styles
 import styled from 'styled-components';
 import { About } from "../styles";
@@ -189,14 +189,6 @@ const EmailForm = styled(About)`
             width: 26%;
         }
     }
-`;
-
-const SubmitBtn = styled(motion.input)`
-
-`;
-
-const SubmitBtnContainer = styled(motion.div)`
-    width: 100%;
 `;
 
 export default ServicesSection;

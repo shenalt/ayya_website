@@ -1,10 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 // Images 
 import artOfKillinIt from '../img/artOfKillinIt.png';
 import weFixedIt from '../img/weFixedIt.png';
-import { Image } from "../styles";
+import veryHappyPeople from '../img/veryHappyPeople.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, fade, fadeNextShowFront, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
@@ -12,6 +11,7 @@ import { useScroll } from "../components/useScroll";
 
 const MyWork = () => {
     const [element, controls] = useScroll();
+    const [element2, controls2] = useScroll();
     return(
         <Work 
             variants={pageAnimation} 
@@ -28,7 +28,7 @@ const MyWork = () => {
             <Show className="container-sm">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | June 17th, 8:00PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | June 30th, 8:00PM</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3 center-block">
                         <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
@@ -60,14 +60,31 @@ const MyWork = () => {
                     </div>
                     <motion.div variants={lineAnim} className="line"></motion.div>              
                         <Hide>
-                            <a href="https://www.theartofkillinit.com/" target="_blank">
+                            <a href="https://caveat.nyc/series/we-fixed-it/" target="_blank">
                                 <NextShowImg variants={photoAnim} src={weFixedIt} alt="We Fixed It"></NextShowImg>
                             </a>
                         </Hide> 
                 </div>                                    
             </Show>
 
-
+            <Show className="container-sm" ref={element2} variants={fade} animate={controls2} initial="hidden">
+                <div className="row">
+                    <div className="col-md-10 col-sm-9">
+                        <UpcomingShowText className="" variants={fade}>Very Happy People | June 28th, 7:30PM</UpcomingShowText>
+                    </div>
+                    <div className="col-md-2 col-sm-3">
+                        <motion.a href="https://www.eventbrite.com/e/very-happy-people-with-ruby-karp-tickets-348951993807?aff=odwdwdspacecraft" target="_blank">
+                            <NextShowBtn>Get Tickets</NextShowBtn>              
+                        </motion.a>
+                    </div>
+                    <motion.div variants={lineAnim} className="line"></motion.div>              
+                        <Hide>
+                            <a href="https://unionhallny.com/calendar" target="_blank">
+                                <NextShowImg variants={photoAnim} src={veryHappyPeople} alt="Very Happy People At Union Hall"></NextShowImg>
+                            </a>
+                        </Hide> 
+                </div>                                    
+            </Show>
 
             
         </Work>
@@ -119,9 +136,6 @@ const Work = styled(motion.div)`
     @media (max-width: 1300px){
         padding: 1rem 1rem;
     }
-    /* @media (max-width: 768px){
-        padding: 0.1rem 0.1rem;
-    } */
 `;
 
 const Show = styled(motion.div)`

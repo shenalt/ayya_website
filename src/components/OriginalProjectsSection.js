@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from 'styled-components';
-import { About, Image, ImageFlexTwo } from "../styles";
-import Toggle from "./Toggle";
-import { AnimateSharedLayout, LayoutGroup, MotionConfig, motion } from "framer-motion";
+import { ImageFlexTwo } from "../styles";
+import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
-import { scrollReveal, photoAnimExit, fade } from "../animation";
+import { scrollReveal, photoAnimExit } from "../animation";
 import weFixedIt from '../img/weFixedIt.png';
 
 
