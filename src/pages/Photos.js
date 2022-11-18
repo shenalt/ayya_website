@@ -13,6 +13,12 @@ import ayyaOnStage3 from '../img/shenuqueOnstage3.jpg';
 import ayyaPurpleCouch from '../img/ShenuquePurple.jpg';
 import ayyaRedJacket from '../img/shenuqueRed.jpg';
 import ayyaWhiteWall from '../img/ShenuqueOnline.jpg';
+import whiteJump from '../img/ayyaPhoto.webp';
+import almostTherapy from '../img/almostTherapy.jpg';
+import hottie from '../img/hottie.JPG';
+import slap from '../img/slap.JPG';
+import smile from '../img/smileAiya.jpg';
+import acting from '../img/aiyaActing.jpg';
 
 const Photos = () => {
     return(
@@ -36,10 +42,10 @@ const Photos = () => {
                 initial={{ opacity: 0 }}
             >
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaOnStageRed} alt="Shenuque on stage at Littlefield"></Photo>
+                    <Photo src={ayyaOnStageRed} alt="Shenuque Tissera on stage at Littlefield"></Photo>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaOnStage2} alt="Shenuque on stage"></Photo> 
+                    <Photo src={ayyaOnStage2} alt="Shenuque Tissera on stage"></Photo> 
                 </div>
             </FirstPicRow>
 
@@ -49,34 +55,60 @@ const Photos = () => {
                 initial={{ opacity: 0 }}
             >
                 <div class="col-12">
-                    <Photo src={ayyaOnStage3} loading="lazy" alt="Shenuque on stage again"></Photo>
+                    <Photo src={ayyaOnStage3} loading="lazy" alt="Shenuque Tissera on stage again"></Photo>
                 </div>
             </SecondPicRow>
 
             <div className="row">
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaPurpleCouch} loading="lazy" alt="Shenuque headshot in front of a purple couch"></Photo>
+                    <Photo src={ayyaPurpleCouch} loading="lazy" alt="Shenuque Tissera headshot in front of a purple couch"></Photo>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaRedJacket} loading="lazy" alt="Shenuque headshot in a red jacket"></Photo>
+                    <Photo src={ayyaRedJacket} loading="lazy" alt="Shenuque Tissera headshot in a red jacket"></Photo>
                 </div>
             </div>
 
             <div className="row">
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaWhiteWall} loading="lazy" alt="Shenuque headshot against a white wall"></Photo>
+                    <Photo src={slap} loading="lazy" alt="Shenuque Tissera playing Jaylen in the Art of Killin It"></Photo>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaBroadway} loading="lazy" alt="Shenuque at Broadway Comedy Club"></Photo>
+                    <Photo src={acting} loading="lazy" alt="Shenuque Tissera acting as Jaylen in the Art of Killin It"></Photo>
+                </div>
+            </div>
+
+            <div className="row">
+                <div class="col-md-6 col-sm-12">
+                    <Photo src={ayyaWhiteWall} loading="lazy" alt="Shenuque Tissera headshot against a white wall"></Photo>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <Photo src={ayyaBroadway} loading="lazy" alt="Shenuque Tissera at Broadway Comedy Club"></Photo>
+                </div>
+            </div>
+
+            <div className="row">
+                <div class="col-md-6 col-sm-12">
+                    <Photo src={almostTherapy} loading="lazy" alt="Shenuque Tissera at Almost Therapy show at Caveat"></Photo>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <Photo src={hottie} loading="lazy" alt="Shenuque Tissera acting in the Art of Killin It"></Photo>
+                </div>
+            </div>
+
+            <div className="row">
+                <div class="col-md-6 col-sm-12">
+                    <Photo src={ayyaCoolStool} loading="lazy" alt="Shenuque Tissera headshot at Caveat"></Photo>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <Photo src={whiteJump} loading="lazy" alt="Shenuque Tissera in a white jumpsuit"></Photo>
                 </div>
             </div>
 
             <div className="row">
                 <div class="col-12">
-                    <Photo src={ayyaCoolStool} loading="lazy" alt="Shenuque headshot at Caveat"></Photo>
+                    <Photo src={smile} loading="lazy" alt="Shenuque Tissera smiling"></Photo>
                 </div>
             </div>
-
         </PhotosContainer>     
     );
 };

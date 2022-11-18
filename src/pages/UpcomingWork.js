@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Images 
 import artOfKillinIt from '../img/artOfKillinIt.png';
 import weFixedIt from '../img/weFixedIt.png';
-import veryHappyPeople from '../img/veryHappyPeople.png';
+import whoDoneIt from '../img/whoDoneIt.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, fade, fadeNextShowFront, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
@@ -28,7 +28,7 @@ const MyWork = () => {
             <Show className="container-sm">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | June 30th, 8:00PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | November 16th - December 30th</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3 center-block">
                         <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
@@ -43,7 +43,7 @@ const MyWork = () => {
                     <motion.div variants={lineAnim} className="line"></motion.div>              
                         <Hide>
                             <a href="https://www.theartofkillinit.com/" target="_blank">
-                                <NextShowImg variants={photoAnim} src={artOfKillinIt} alt="We Fixed It"></NextShowImg>
+                                <NextShowImg variants={photoAnim} src={artOfKillinIt} alt="The Art of Killin It interactive play featuring Shenuque Tissera as Jaylen"></NextShowImg>
                             </a>
                         </Hide> 
                 </div>                                    
@@ -51,42 +51,39 @@ const MyWork = () => {
             <Show className="container-sm" ref={element} variants={fade} animate={controls} initial="hidden">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fade}>We Fixed It | July 14th, 8:30PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fade}>We Fixed It | December 8th, 9:30PM</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3">
-                        <motion.a href="https://caveat.stellartickets.com/events/we-fixed-it/occurrences/a63b4966-3c9e-4214-adbe-ef3370220348" target="_blank">
+                        <motion.a href="https://caveat.stellartickets.com/events/we-fixed-it/occurrences/da7d2adf-c811-4641-98b4-1e75eb7bea9d" target="_blank">
                             <NextShowBtn>Get Tickets</NextShowBtn>              
                         </motion.a>
                     </div>
                     <motion.div variants={lineAnim} className="line"></motion.div>              
                         <Hide>
-                            <a href="https://caveat.nyc/series/we-fixed-it/" target="_blank">
-                                <NextShowImg variants={photoAnim} src={weFixedIt} alt="We Fixed It"></NextShowImg>
+                            <a href="https://caveat.nyc/events/we-fixed-it-12-8-2022" target="_blank">
+                                <NextShowImg variants={photoAnim} src={weFixedIt} alt="We Fixed It comedy show hosted by Shenuque Tissera, Vivek Netrekanti, and Peter Grosz"></NextShowImg>
                             </a>
                         </Hide> 
                 </div>                                    
             </Show>
-
             <Show className="container-sm" ref={element2} variants={fade} animate={controls2} initial="hidden">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fade}>Very Happy People | June 28th, 7:30PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fade}>Who Done It? | November 16th, 8:00PM</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3">
-                        <motion.a href="https://www.eventbrite.com/e/very-happy-people-with-ruby-karp-tickets-348951993807?aff=odwdwdspacecraft" target="_blank">
+                        <motion.a href="https://www.exploretock.com/theartofkillinit/event/368125?date=2022-10-19&size=1&time=20%3A00" target="_blank">
                             <NextShowBtn>Get Tickets</NextShowBtn>              
                         </motion.a>
                     </div>
                     <motion.div variants={lineAnim} className="line"></motion.div>              
                         <Hide>
-                            <a href="https://unionhallny.com/calendar" target="_blank">
-                                <NextShowImg variants={photoAnim} src={veryHappyPeople} alt="Very Happy People At Union Hall"></NextShowImg>
+                            <a href="https://www.exploretock.com/theartofkillinit/event/368125?date=2022-10-19&size=1&time=20%3A00" target="_blank">
+                                <NextShowImg variants={photoAnim} src={whoDoneIt} alt="Who Done It comedy show at Future Proof featuring Shenuque Tissera and Tony Sykowski"></NextShowImg>
                             </a>
                         </Hide> 
                 </div>                                    
             </Show>
-
-            
         </Work>
     );
 };

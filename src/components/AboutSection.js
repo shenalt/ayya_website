@@ -1,5 +1,5 @@
 import React from "react";
-import ayyaPho from '../img/ayyaPhoto.webp';
+import ayyaPho from '../img/aiyaReplacement.jpg';
 // Framer Motion
 import {motion} from 'framer-motion';
 import Wave from "./Wave";
@@ -21,7 +21,7 @@ const AboutSection = () => {
                     </Hide>
                     <Hide>
                         <motion.h2 variants={titleAnim}>Actor. <span>Comedian.</span> Writer.</motion.h2>
-                        <motion.button variants={fade}><a href="/work">Next Show</a></motion.button>
+                        <a href="/work"><motion.button variants={fade}>Next Show</motion.button></a>
                     </Hide>                                      
                 </motion.div>
                 <Summary variants={fade}>

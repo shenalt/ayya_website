@@ -91,14 +91,14 @@ const ServicesSection = () => {
 };
 
 const EmailForm = styled(About)`
-    position: absolute;
-    left: 25%;
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     input{
-        width: 70%;
+        width: 100%;
         padding-bottom: 2rem;
         margin-bottom: 1rem;
-        margin-left: 1rem;
         align-content: center;
         border-radius: 4px;
     }
@@ -109,85 +109,23 @@ const EmailForm = styled(About)`
         padding: 5px 0px 5px 5px;
     }
     #submitBtn{
-        margin-left: 12.5rem;
-        width: 26%;
+        width: 50%;
         padding: 10px 5px 10px 5px;
         cursor: pointer;
         background-color: #23d997;
     }
-
+    form{
+        text-align: center;
+    }
     textarea{
-        width: 70%;
+        width: 100%;
         height: 10rem;
         margin-bottom: 1rem;
-        margin-left: 1rem;
         padding: 5px 0px 5px 5px;
         border-radius: 4px;
     }
     h2{
         text-align: center;
-    }
-    @media (min-width: 1px) and (max-width: 1200px){
-        position: absolute;
-        left: 0%;
-        width: 100%;
-        padding-top: 10rem;
-        #submitBtn{
-            margin-left: 2rem;
-            width: 26%;
-        }
-    }
-    @media (min-width: 1201px) and (max-width: 1300px){
-        position: absolute;
-        left: 0%;
-        width: 100%;
-        padding-top: 10rem;
-        #submitBtn{
-            margin-left: 3rem;
-            width: 26%;
-        }
-    }
-    @media (min-width: 1301px) and (max-width: 1400px){
-        position: absolute;
-        left: 0%;
-        width: 100%;
-        padding-top: 10rem;
-        #submitBtn{
-            margin-left: 15.5rem;
-            width: 26%;
-        }
-    }
-    @media (min-width: 1401px) and (max-width: 1500px){
-        position: absolute;
-        padding-top: 10rem;
-        #submitBtn{
-            margin-left: 10rem;
-            width: 26%;
-        }
-    }
-    @media (min-width: 1501px) and (max-width: 1700px){
-        position: absolute;
-        padding-top: 10rem;
-        #submitBtn{
-            margin-left: 10rem;
-            width: 26%;
-        }
-    }
-    @media (min-width: 1701px) and (max-width: 1900px){
-        position: absolute;
-        padding-top: 10rem;
-        #submitBtn{
-            margin-left: 8rem;
-            width: 26%;
-        }
-    }
-    @media (min-width: 1901px) and (max-width: 3000px){
-        position: absolute;
-        padding-top: 10rem;
-        #submitBtn{
-            margin-left: 10.5rem;
-            width: 26%;
-        }
     }
 `;
 

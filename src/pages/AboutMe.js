@@ -2,7 +2,6 @@ import React from "react";
 // Page Components
 import AboutSection from "../components/AboutSection";
 import ContactMeSection from "../components/ContactMeSection";
-import OriginalProjectsSection from "../components/OriginalProjectsSection";
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation } from "../animation";
@@ -17,7 +16,6 @@ const AboutMe = () => {
             animate="show"
         >
             <AboutSection />
-            <OriginalProjectsSection />
             <ContactMeSection />                    
         </motion.div>
     );
