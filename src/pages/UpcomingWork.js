@@ -8,10 +8,16 @@ import whoDoneIt from '../img/whoDoneIt.png';
 import { motion } from 'framer-motion';
 import { pageAnimation, fade, fadeNextShowFront, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
 import { useScroll } from "../components/useScroll";
+import { getProperDay } from "../components/getProperDay";
+import { getProperMonth } from "../components/getProperMonth";
 
 const MyWork = () => {
     const [element, controls] = useScroll();
     const [element2, controls2] = useScroll();
+    
+    const day = getProperDay();
+    const month = getProperMonth();
+    
     return(
         <Work 
             variants={pageAnimation} 
@@ -28,7 +34,7 @@ const MyWork = () => {
             <Show className="container-sm">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | November 16th - December 30th</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | {month} {day} - February 25</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3 center-block">
                         <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
@@ -51,39 +57,23 @@ const MyWork = () => {
             <Show className="container-sm" ref={element} variants={fade} animate={controls} initial="hidden">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fade}>We Fixed It | December 8th, 9:30PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fade}>We Fixed It | January 19, 8:30PM</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3">
-                        <motion.a href="https://caveat.stellartickets.com/events/we-fixed-it/occurrences/da7d2adf-c811-4641-98b4-1e75eb7bea9d" target="_blank">
+                        <motion.a href="https://caveat.nyc/events/we-fixed-it-1-19-2023" target="_blank">
                             <NextShowBtn>Get Tickets</NextShowBtn>              
                         </motion.a>
                     </div>
                     <motion.div variants={lineAnim} className="line"></motion.div>              
                         <Hide>
-                            <a href="https://caveat.nyc/events/we-fixed-it-12-8-2022" target="_blank">
+                            <a href="https://caveat.nyc/events/we-fixed-it-1-19-2023" target="_blank">
                                 <NextShowImg variants={photoAnim} src={weFixedIt} alt="We Fixed It comedy show hosted by Shenuque Tissera, Vivek Netrekanti, and Peter Grosz"></NextShowImg>
                             </a>
                         </Hide> 
                 </div>                                    
             </Show>
-            <Show className="container-sm" ref={element2} variants={fade} animate={controls2} initial="hidden">
-                <div className="row">
-                    <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fade}>Who Done It? | November 16th, 8:00PM</UpcomingShowText>
-                    </div>
-                    <div className="col-md-2 col-sm-3">
-                        <motion.a href="https://www.exploretock.com/theartofkillinit/event/368125?date=2022-10-19&size=1&time=20%3A00" target="_blank">
-                            <NextShowBtn>Get Tickets</NextShowBtn>              
-                        </motion.a>
-                    </div>
-                    <motion.div variants={lineAnim} className="line"></motion.div>              
-                        <Hide>
-                            <a href="https://www.exploretock.com/theartofkillinit/event/368125?date=2022-10-19&size=1&time=20%3A00" target="_blank">
-                                <NextShowImg variants={photoAnim} src={whoDoneIt} alt="Who Done It comedy show at Future Proof featuring Shenuque Tissera and Tony Sykowski"></NextShowImg>
-                            </a>
-                        </Hide> 
-                </div>                                    
-            </Show>
+            
+            <script src="../js/tester.js"></script>
         </Work>
     );
 };
