@@ -3,7 +3,6 @@ import styled from 'styled-components';
 // Images 
 import artOfKillinIt from '../img/artOfKillinIt.png';
 import weFixedIt from '../img/weFixedIt.png';
-import whoDoneIt from '../img/whoDoneIt.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, fade, fadeNextShowFront, photoAnim, lineAnim, slider, sliderContainer } from "../animation";

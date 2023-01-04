@@ -55,16 +55,16 @@ const Photos = () => {
                 initial={{ opacity: 0 }}
             >
                 <div class="col-12">
-                    <Photo src={ayyaOnStage3} loading="lazy" alt="Shenuque Tissera on stage again"></Photo>
+                    <Photo src={ayyaOnStage3} loading="lazy" alt="Shenuque Tissera on stage"></Photo>
                 </div>
             </SecondPicRow>
 
             <div className="row">
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaPurpleCouch} loading="lazy" alt="Shenuque Tissera headshot in front of a purple couch"></Photo>
+                    <Photo src={ayyaPurpleCouch} loading="lazy" alt="Shenuque Tissera headshot"></Photo>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaRedJacket} loading="lazy" alt="Shenuque Tissera headshot in a red jacket"></Photo>
+                    <Photo src={ayyaRedJacket} loading="lazy" alt="Shenuque Tissera headshot"></Photo>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@ const Photos = () => {
 
             <div className="row">
                 <div class="col-md-6 col-sm-12">
-                    <Photo src={ayyaWhiteWall} loading="lazy" alt="Shenuque Tissera headshot against a white wall"></Photo>
+                    <Photo src={ayyaWhiteWall} loading="lazy" alt="Shenuque Tissera headshot"></Photo>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <Photo src={ayyaBroadway} loading="lazy" alt="Shenuque Tissera at Broadway Comedy Club"></Photo>
@@ -106,7 +106,7 @@ const Photos = () => {
 
             <div className="row">
                 <div class="col-12">
-                    <Photo src={smile} loading="lazy" alt="Shenuque Tissera smiling"></Photo>
+                    <Photo src={smile} loading="lazy" alt="Shenuque Tissera"></Photo>
                 </div>
             </div>
         </PhotosContainer>     
