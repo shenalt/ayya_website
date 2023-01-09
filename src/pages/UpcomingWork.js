@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // Images 
 import artOfKillinIt from '../img/artOfKillinIt.png';
 import weFixedIt from '../img/weFixedIt.png';
+import doneIt from '../img/whoDoneIt.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, fade, fadeNextShowFront, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
@@ -33,7 +34,7 @@ const MyWork = () => {
             <Show className="container-sm">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | {month} {day} - February 25</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | {month} {day} - March 31</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3 center-block">
                         <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
@@ -72,7 +73,24 @@ const MyWork = () => {
                 </div>                                    
             </Show>
             
-            <script src="../js/tester.js"></script>
+            <Show className="container-sm" ref={element2} variants={fade} animate={controls2} initial="hidden">
+                <div className="row">
+                    <div className="col-md-10 col-sm-9">
+                        <UpcomingShowText className="" variants={fade}>Who Done It | January 25, 8:00PM</UpcomingShowText>
+                    </div>
+                    <div className="col-md-2 col-sm-3">
+                        <motion.a href="https://www.exploretock.com/theartofkillinit/event/368125?date=2023-01-25&size=1&time=20%3A00" target="_blank">
+                            <NextShowBtn>Get Tickets</NextShowBtn>              
+                        </motion.a>
+                    </div>
+                    <motion.div variants={lineAnim} className="line"></motion.div>              
+                        <Hide>
+                            <a href="https://www.exploretock.com/theartofkillinit/event/368125?date=2023-01-25&size=1&time=20%3A00" target="_blank">
+                                <NextShowImg variants={photoAnim} src={doneIt} alt="Who Done It comedy show hosted by Shenuque Tissera and Tony Sykowski"></NextShowImg>
+                            </a>
+                        </Hide> 
+                </div>                                    
+            </Show>
         </Work>
     );
 };
