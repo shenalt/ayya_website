@@ -25,13 +25,17 @@ const AboutSection = () => {
                     </Hide>                                      
                 </motion.div>
                 <Summary variants={fade}>
-                    Shenuque is a Queer Sri Lankan actor, writer, and comedian born and raised in Staten Island, New York. He is currently playing 'Jaylen' in the 
-                    Off-Broadway production of the Art of Killin It! Shenuque has recently written and performed for HBO Max's Human by Orientation platform. Shenuque is also currently a writer
-                    for Someecards.com. Shenuque has been performing standup for 4 years. Throughout that time he's hosted and produced the successful stand up show Token White Guy at QED and
-                    Caroline's on Broadway and is now co-producing and hosting the comedy show We Fixed It! alongside Peter Grosz and Vivek Netrakanti. Shenuque was a featured writer and performer
-                    at the People's Improv Theater House Sketch program writing and performing live sketch comedy. Shenuque has performed in festivals such as NY Sketchfest, YAAASFest, 5th Borough
-                    Comedy Festival, Very Big Very Asian Comedy Festival and was a Quarterfinalist at the San Diego Comedy Festival. Come see him perform!
-                </Summary>                
+                    Shenuque is a Queer Sri Lankan actor, writer, and comedian hailing from Staten Island, New York. With a passion for storytelling, he's graced the stage in Off-Broadway productions and 
+                    contributed his writing talents to HBO Max. As a co-founder of Many Sided Media, Shenuque's creativity shines in the award-winning show My First Dungeon, which has earned numerous accolades.               
+                </Summary>       
+                <Summary variants={fade}>
+                    Currently, Shenuque is working on his stand-up special, Where Do We Belong?, and has performed at renowned festivals such as the New York Comedy Festival, NY Sketchfest, YAAASFest, 5th 
+                    Borough Comedy Festival, and the Very Big Very Asian Comedy Festival. He was also a Quarterfinalist at the San Diego Comedy Festival.
+                </Summary>    
+                <Summary variants={fade}>
+                    In addition to his stand-up work, Shenuque is the producer and performer of the comedy show Petty Claims, where audience members can bring their petty grievances against friends or family 
+                    to be hilariously litigated in a court of comedy.
+                </Summary>      
             </Description>
             <FrontPageImg>
                 <motion.img variants={photoAnim} src={ayyaPho} alt="photo" />

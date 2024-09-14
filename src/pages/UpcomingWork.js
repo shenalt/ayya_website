@@ -2,8 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 // Images 
 import artOfKillinIt from '../img/artOfKillinIt.png';
-import weFixedIt from '../img/weFixedIt.png';
-import doneIt from '../img/whoDoneIt.png';
+import comeback from '../img/comebackComedy.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, fade, fadeNextShowFront, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
@@ -34,7 +33,7 @@ const MyWork = () => {
             <Show className="container-sm">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | {month} {day} - March 31</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fadeNextShowFront}>The Art of Killin' It | {month} {day} - June 29</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3 center-block">
                         <motion.a href="https://www.exploretock.com/theartofkillinit" target="_blank">
@@ -54,29 +53,29 @@ const MyWork = () => {
                         </Hide> 
                 </div>                                    
             </Show>
-            <Show className="container-sm" ref={element} variants={fade} animate={controls} initial="hidden">
+            {/* <Show className="container-sm" ref={element} variants={fade} animate={controls} initial="hidden">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fade}>We Fixed It | January 19, 8:30PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fade}>Comeback Comedy | July 29, 8:45PM</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3">
-                        <motion.a href="https://caveat.nyc/events/we-fixed-it-1-19-2023" target="_blank">
+                        <motion.a href="https://www.eventbrite.com/e/comeback-comedy-tickets-663927263317?aff=erelexpmlt" target="_blank">
                             <NextShowBtn>Get Tickets</NextShowBtn>              
                         </motion.a>
                     </div>
                     <motion.div variants={lineAnim} className="line"></motion.div>              
-                        <Hide>
-                            <a href="https://caveat.nyc/events/we-fixed-it-1-19-2023" target="_blank">
-                                <NextShowImg variants={photoAnim} src={weFixedIt} alt="We Fixed It comedy show hosted by Shenuque Tissera, Vivek Netrekanti, and Peter Grosz"></NextShowImg>
+                        <Hide>                        
+                            <a href="https://www.eventbrite.com/e/comeback-comedy-tickets-663927263317?aff=erelexpmlt" target="_blank">
+                                <NextShowImg variants={photoAnim} src={comeback} alt="Comeback Comedy show hosted by Shenuque Tissera and Caitlin Reese"></NextShowImg>
                             </a>
                         </Hide> 
                 </div>                                    
-            </Show>
+            </Show> */}
             
-            <Show className="container-sm" ref={element2} variants={fade} animate={controls2} initial="hidden">
+            {/* <Show className="container-sm" ref={element2} variants={fade} animate={controls2} initial="hidden">
                 <div className="row">
                     <div className="col-md-10 col-sm-9">
-                        <UpcomingShowText className="" variants={fade}>Who Done It | January 25, 8:00PM</UpcomingShowText>
+                        <UpcomingShowText className="" variants={fade}>Who Done It | March 8, 8:00PM</UpcomingShowText>
                     </div>
                     <div className="col-md-2 col-sm-3">
                         <motion.a href="https://www.exploretock.com/theartofkillinit/event/368125?date=2023-01-25&size=1&time=20%3A00" target="_blank">
@@ -90,7 +89,7 @@ const MyWork = () => {
                             </a>
                         </Hide> 
                 </div>                                    
-            </Show>
+            </Show> */}
         </Work>
     );
 };
