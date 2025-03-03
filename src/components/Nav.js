@@ -87,6 +87,16 @@ const Nav = () => {
                             animate={{ width: activepath.pathname === "/videos" ? "50%" : "0%" }} 
                         />
                     </li>
+                    <li className="nav-text special-text">
+                        <Link to="/where">
+                            Tell Me Where to Perform
+                        </Link>
+                        <Line 
+                            transition={{ duration: 0.75 }} 
+                            initial={{ width: "0%" }} 
+                            animate={{ width: activepath.pathname === "/where" ? "40%" : "0%" }} 
+                        />
+                    </li>
                 </ul>
             </StyledNav>
         
@@ -111,6 +121,8 @@ const StyledNav = styled.div`
     ul{
         display: flex;
         list-style: none;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     #logo{
         font-size: 1.8rem;
@@ -128,6 +140,9 @@ const StyledNav = styled.div`
         a:hover{
             color: #23d997;
         }
+    }
+    .special-text{
+        font-size: .8rem;
     }
     .social-media{
         padding-left: 3rem;
@@ -160,6 +175,11 @@ const StyledNav = styled.div`
             li {
                 padding: 0;
             }
+        }
+    }
+    @media only screen and (max-width: 420px){
+        ul{
+            gap: 20px;
         }
     }
 `;

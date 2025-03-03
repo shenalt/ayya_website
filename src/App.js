@@ -8,6 +8,7 @@ import UpcomingWork from "./pages/UpcomingWork";
 import Nav from "./components/Nav";
 import Calendar from "./pages/Calendar";
 import Videos from "./pages/Videos";
+import Where from "./pages/Where";
 // Router
 import { Routes, Route, useLocation } from 'react-router-dom';
 // Animation
@@ -33,6 +34,7 @@ function App() {
           <Route path="/photos" exact element={<Photos />} />
           <Route path="/calendar" exact element={<Calendar />} />
           <Route path="/videos" exact element={<Videos />} />
+          <Route path="/where" exact element={<Where />} />
         </Routes>
       </AnimatePresence> 
     </div>
