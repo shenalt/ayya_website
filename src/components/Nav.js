@@ -133,7 +133,7 @@ const StyledNav = styled.div`
         color: #23d997;
     }
     li{
-        padding-left: 10rem;
+        padding-left: 6rem;
         position: relative;
     }
     .nav-text{
