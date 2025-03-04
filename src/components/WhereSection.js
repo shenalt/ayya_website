@@ -2,16 +2,28 @@ import React from "react";
 // Framer Motion
 import {motion} from 'framer-motion';
 // Animation
-import { titleAnim, fade, photoAnim } from "../animation";
+import { titleAnim, fade, photoAnim, slider, sliderContainer } from "../animation";
+import { Frame1, Frame2, Frame3, Frame4 } from "../styles";
 // Styled Components
 import styled from 'styled-components';
-
 
 const WhereSection = () => {
 
     return (
         <GoogleForm>
-            <SpecialFrame src="https://docs.google.com/forms/d/e/1FAIpQLSeZ8yG9F4ND5u9UwreSuOh6PaHkSVGqVp2jVlNL4PShtbMXZg/viewform?embedded=true" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</SpecialFrame>
+            <motion.div variants={sliderContainer}>
+                <Frame1 variants={slider}></Frame1>
+                <Frame2 variants={slider}></Frame2>
+                <Frame3 variants={slider}></Frame3>
+                <Frame4 variants={slider}></Frame4>
+            </motion.div>
+            <SpecialFrame 
+                animate={{ opacity: 1, transition: {delay: 1} }}
+                initial={{ opacity: 0 }}
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeZ8yG9F4ND5u9UwreSuOh6PaHkSVGqVp2jVlNL4PShtbMXZg/viewform?embedded=true" height="800" frameborder="0" marginheight="0" marginwidth="0"
+            >
+                Loading…
+            </SpecialFrame>
         </GoogleForm>
     );
 };
